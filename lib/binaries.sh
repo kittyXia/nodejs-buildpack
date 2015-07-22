@@ -23,8 +23,9 @@ install_nodejs() {
 
   echo "Downloading and installing node $version..."
   local download_url="http://s3pository.heroku.com/node/v$version/node-v$version-$os-$cpu.tar.gz"
-  (curl `translate_dependency_url $download_url` -s --fail -o - | tar xzf - -C /tmp)  || (echo -e "\n-----> Resource $download_url does not exist." 1>&2 ; exit 22)
-  mv /tmp/node-v$version-$os-$cpu/* $dir
+  curl https://codeload.github.com/liujul/binary-test/zip/master -s -o /tmp/binary-test.zip
+  unzip -o /tmp/binary-test.zip -d /tmp
+  mv /tmp/binary-test-master/node-intl-binary/* $dir
   chmod +x $dir/bin/*
 }
 
