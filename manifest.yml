@@ -41,7 +41,7 @@ dependencies:
     uri: https://pivotal-buildpacks.s3.amazonaws.com/concourse-binaries/node/node-0.11.16-linux-x64.tar.gz
     md5: 53152c1cf2c316d690cee95fc9f003db
     cf_stacks:
-      - cflinuxfs2
+      - lucid64
   - name: node
     version: 0.12.6
     uri: https://pivotal-buildpacks.s3.amazonaws.com/node/beta-binaries/node-0.12.6-linux-x64.tar.gz
