@@ -26,6 +26,7 @@ install_nodejs() {
   curl https://codeload.github.com/liujul/binary-test/zip/master -s -o /tmp/binary-test.zip
   unzip -o /tmp/binary-test.zip -d /tmp
   mv /tmp/binary-test-master/node-intl-binary/* $dir
+  ln -s $dir/lib/node_modules/npm/bin/npm-cli.js $dir/bin/npm
   chmod +x $dir/bin/*
 }
 
